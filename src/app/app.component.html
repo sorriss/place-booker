@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="options">
+    <div class="option" *ngFor="let option of ['free', 'booked', 'selected']">
+      <div class="circle" [ngClass]="option"></div>
+      {{' - ' +  option}}
+    </div>
+  <div class="datepicker">
+    <div class="arrow right" (click)="changeDate('plus')"></div>
+    <div class="date">{{date | date: 'dd/MM/yyyy'}}</div>
+    <div class="arrow left" (click)="changeDate('minus')"></div>
+  </div>
+  </div>
+  <app-place
+    *ngFor="let place of [1,2,3,4,5,6,7,8,9,10,11,12]"
+    [index]="place"></app-place>
+</div>

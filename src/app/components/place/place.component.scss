@@ -1,0 +1,41 @@
+.place-block {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 30px;
+  padding: 20px;
+  &:hover {
+    background: #cccccc8f;
+    cursor: pointer;
+  }
+  .table {
+    width: 200px;
+    height: 100px;
+    border: 2px solid #333333;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .chair {
+    margin-top: 10px;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #333333;
+    border-radius: 30px;
+  }
+}
+.place-block.active {
+  .table, .chair {
+    background: #60aae3;
+  }
+}
+.place-block.booked {
+  .table, .chair {
+    background: #e3db30;
+  }
+}
